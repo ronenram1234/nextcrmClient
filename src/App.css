@@ -1,0 +1,91 @@
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.list-group-flush {
+  flex-grow: 1;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-flush {
+  flex-grow: 1;
+}
+
+.icons {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  align-items: flex-end;
+ 
+}
+
+
+.custom-carousel .carousel-inner {
+  padding: 20px; 
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  z-index: 1; 
+  margin-left: 10px; 
+  margin-right: 10px; 
+}
+
+.custom-carousel .carousel-item {
+  padding-bottom: 50px; 
+}
+
+
+
+
+.admin-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-style:bold;
+}
+
+
+
+
