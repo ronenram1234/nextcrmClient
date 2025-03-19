@@ -138,7 +138,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
       }),
     }),
     onSubmit: async (values) => {
-      console.log(action);
+      
       if (action === "update") {
         updateCard(values, token,item._id)
           .then((res) => {
@@ -154,22 +154,22 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
             }
           })
           .catch((err) => {
-            console.log(`Transaction Error - ${err.message} - ${err.response.data}`);
+            
             errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
             
           });
       } else if (action === "newFromExist" || action === "new") {
-        // console.log(values);
+        
         createNewCard(values, token)
           .then((res) => {
-            console.log(res.data);
+            
 
             localCardArray.push(res.data);
             setCardArray(localCardArray);
             navigate(-1)
           })
           .catch((err) => {
-            console.log(`Transaction Error - ${err.message} - ${err.response.data}`);
+            
             
             errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
             

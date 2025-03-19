@@ -16,7 +16,7 @@ export function getAllMyCards(token: string): Promise<AxiosResponse> {
     url: `${api}/my-cards`,
     headers: { Authorization: token },
   };
-  console.log(token);
+  
 
   return axios.request(config);
 }
@@ -65,9 +65,7 @@ export function updateCard(
     },
     data: data,
   };
-  console.log(card);
-  console.log(config.url);
-  console.log(token);
+
 
   return axios.request(config);
 }
@@ -75,8 +73,7 @@ export function createNewCard(
   card: NewCard,
   token: string
 ): Promise<AxiosResponse> {
-  console.log(token);
-  console.log(card);
+  
 
   let config = {
     method: "post",
@@ -88,7 +85,7 @@ export function createNewCard(
     data: card,
   };
 
-  console.log(config);
+  
 
   return axios.request(config);
 }
@@ -98,7 +95,7 @@ export function deleteCard(
   token: string,
   cardId: string
 ): Promise<AxiosResponse> {
-  console.log(bizNumber);
+  
 
   let data = { bizNumber: bizNumber };
 
