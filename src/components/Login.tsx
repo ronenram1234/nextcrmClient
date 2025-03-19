@@ -42,7 +42,7 @@ const Login: FunctionComponent<LoginProps> = ({ setIsRegister }) => {
         .then((res) => {
           if (res.data.length > 0) {
             successMsg("Succesful login")
-            console.log(res.data);
+            // console.log(res.data);
             setToken(res.data);
             setTokenLocalStorage(res.data);
             setIsUsserLogedin(true);
@@ -73,6 +73,7 @@ const Login: FunctionComponent<LoginProps> = ({ setIsRegister }) => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+             autoComplete="username"
             fullWidth
             error={formik.touched.email && Boolean(formik.errors.email)}
             helperText={formik.touched.email && formik.errors.email}
@@ -92,6 +93,7 @@ const Login: FunctionComponent<LoginProps> = ({ setIsRegister }) => {
             fullWidth
             error={formik.touched.password && Boolean(formik.errors.password)}
             helperText={formik.touched.password && formik.errors.password}
+              autoComplete="current-password"
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">

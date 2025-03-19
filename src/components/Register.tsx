@@ -219,6 +219,7 @@ const Register: FunctionComponent<RegisterProps> = ({ setIsRegister }) => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                 autoComplete="username"
                 fullWidth
                 error={formik.touched.email && Boolean(formik.errors.email)}
                 helperText={formik.touched.email && formik.errors.email}
@@ -239,6 +240,7 @@ const Register: FunctionComponent<RegisterProps> = ({ setIsRegister }) => {
                   formik.touched.password && Boolean(formik.errors.password)
                 }
                 helperText={formik.touched.password && formik.errors.password}
+                  autoComplete="current-password"
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">

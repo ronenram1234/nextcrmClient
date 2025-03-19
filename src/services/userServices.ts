@@ -36,7 +36,7 @@ export function getUserDetail(
     url: `${api}/${id}`,
 
     headers: {
-      "x-auth-token": `${token}`,
+      Authorization: `${token}`,
     },
   };
 
@@ -49,8 +49,7 @@ export function getAllUsersDetail(token: string): Promise<AxiosResponse> {
     maxBodyLength: Infinity,
     url: api,
     headers: {
-      "x-auth-token":
-        token,
+      Authorization: token,
     },
   };
 
@@ -60,7 +59,6 @@ export function getAllUsersDetail(token: string): Promise<AxiosResponse> {
 // acess to localstorage
 
 export function setTokenLocalStorage(token: string) {
-  
   localStorage.setItem(tokenKey, token);
 }
 
